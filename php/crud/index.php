@@ -5,10 +5,8 @@
         <meta name="viewport" content="width=device-width">
         <title>Acceso a BBDD (test)</title>
     </head>
-<?php
-
-?>
     <body>
+        <!-- Menú de navegación -->
         <!-- Cuerpo -->
     </body>
 </html>
