@@ -7,15 +7,24 @@
     </head>
 <?php
 // Importamos scripts y clases php (conexión y validación de datos)
-require_once('connect_db.php');
+require_once('connection.php');
 require_once('validate.php');
 
-// Usamos una función para comprobar que los campos no están vacíos
+//iniciamos conexion
+$conn = new connection();
+
+// Filtrar y validar datos 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' &&
     validate::checkEmpty(['campo1', 'campo2', 'campo3'], $_POST)) {
+    // tantas líneas como campos. Usar método apropiado
     $campo1 = validate::str($_POST['campo1']);
     $campo2 = validate::str($_POST['campo2']);
     $campo3 = validate::str($_POST['campo3']);
+
+    // añadimos campos
+    $conn->add();
+    // cerramos conexion
+    $conn->closedb();
 }
 ?>
     <body>

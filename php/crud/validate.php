@@ -43,7 +43,7 @@ class Validate {
             self::throwError('La cadena no es válida', 901);
         } else {
             // filtra la cadena y la devuelve
-            $value = filtrar($value);
+            $value = self::filtrar($value);
             return $value;
         }
     }
