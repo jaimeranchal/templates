@@ -1,0 +1,104 @@
+<!-- plantilla de menú de navegación con Bootstrap -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Plantilla</title>
+        <!-- Bootstrap stylesheet -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <!-- Navegación (barra superior)-->
+        <!-- añade navbar-dark|light para controlar contraste -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!-- brand / logo -->
+            <a class="navbar-brand" href="#">Logo</a>
+            <!-- menú hamburguesa -->
+            <button class="navbar-toggler" type="button"
+             data-toggle="collapse"
+             data-target="#ejemploNav"
+             aria-controls="ejemploNav"
+             aria-expanded="false"
+             aria-label="Activa/desactiva barra de navegación"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- contenido colapsable -->
+            <div class="collapse navbar-collapse" id="ejemploNav">
+                <!-- Enlaces -->
+                <ul class="navbar-nav mr-auto">
+                    <!-- items del menú -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre mí</a>
+                    </li>
+                    <!-- desplegable -->
+                    <li class="nav-item dropdown">
+                        <!-- título del botón -->
+                        <a class="nav-link dropdown-toggle" 
+                           href="#" 
+                           id="navbarDropdown"
+                           role="button" data-toggle="dropdown" 
+                           aria-haspopup="true" 
+                           aria-expanded="false"
+                           >Desplegable</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- items del menú -->
+                            <a class="dropdown-item" href="#" >Página 1</a>
+                            <a class="dropdown-item" href="#" >Página 2</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- / Enlaces -->
+
+                <!-- Formulario (búsqueda) -->
+                <form class="form-inline" action="" method="post">
+                    <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" 
+                         type="text" 
+                         placeholder="Búsqueda"
+                         aria-label="Búsqueda"
+                         name="" 
+                         id="" 
+                         value=""/>
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+            <!-- / contenido colapsable -->
+        </nav>
+
+        <!-- cuerpo de la página -->
+
+        <!-- Librerías JS requeridas por BootStrap -->
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous">
+        </script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous">
+        </script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous">
+        </script>
+    </body>
+</html>
