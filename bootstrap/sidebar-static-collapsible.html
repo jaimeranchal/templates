@@ -1,0 +1,110 @@
+<!-- plantilla de menú de navegación con Bootstrap -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Plantilla</title>
+        <!-- Bootstrap stylesheet -->
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <!-- mis estilos -->
+        <link rel="stylesheet" href="../css/sidebar-sc.css" type="text/css" charset="utf-8">
+    </head>
+    <body>
+        <!-- 
+            la clase 'wrapper' añade la propiedad 'flex'
+            + propiedad 'align-items:stretch' para que la sidebar llegue hasta abajo
+        -->
+        <div class="wrapper">
+
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Menú lateral BS</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <p>Cabecera de muestra</p>
+                    <!-- Home -->
+                    <li class="active">
+                        <a href="#homeSubMenu"
+                          data-toggle="collapse"
+                          aria-expanded="false"
+                          class="dropdown-toggle"
+                        >
+                        Home
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubMenu">
+                            <li><a href="#">Home 1</a></li>
+                            <li><a href="#">Home 2</a></li>
+                            <li><a href="#">Home 3</a></li>
+                        </ul>
+                    </li>
+                    <!-- Páginas -->
+                    <li class="active">
+                        <a href="#pageSubMenu"
+                          data-toggle="collapse"
+                          aria-expanded="false"
+                          class="dropdown-toggle"
+                        >
+                        Pages
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubMenu">
+                            <li><a href="#">Page 1</a></li>
+                            <li><a href="#">Page 2</a></li>
+                            <li><a href="#">Page 3</a></li>
+                        </ul>
+                    </li>
+                    <!-- Otros -->
+                    <li><a href="#">Portafolio</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Cuerpo de la página -->
+            <div class="container" id="contenido">
+                <!-- Navegación (barra superior)-->
+                <!-- añade navbar-dark|light para controlar contraste -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <div class="container-fluid">
+                        <!-- botón despliegue del menú lateral -->
+                        <button class="btn btn-info" type="button" id="sidebarCollapse">
+                            <!-- icono FA -->
+                            <i class="fas fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+                        <a class="navbar-brand" href="#">Logo</a>
+                    </div>
+                </nav>
+                <!-- / Navegación -->
+            </div>
+        </div>
+
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+        <!-- Librerías JS requeridas por BootStrap -->
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous">
+        </script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous">
+        </script>
+        <script
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous">
+        </script>
+        <!-- Mi JavaScript -->
+        <script src="../js/sidebar-sc.js"></script>
+    </body>
+</html>
