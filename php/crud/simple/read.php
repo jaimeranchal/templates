@@ -1,17 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Acceso a bases de datos</title>
-    </head>
+<?php
+// conexión a la bd
+require_once('conexión.php');
 
-    <?php
+// sentencia preparada
+// Recogemos los datos relevantes
+$sth = $conn->prepare('SELECT titulo, autor, fecha FROM libros');
+$sth->execute(array());
+$resultado = $sth->fetchAll();
+?>
 
-    ?>
+<!-- lista o tabla html -->
 
-    <body>
-    </body>
-</html>
-
+<?php foreach ($resultado as $fila) { ?>
+    <!-- elemento de lista o fila con formato -->
+    <?= $fila['titulo'] ?>
+    <!-- ... -->
+<?php } ?>

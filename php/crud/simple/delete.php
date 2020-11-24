@@ -1,28 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Acceso a bases de datos</title>
-    </head>
+<?php
+// conexión a la bd
+require_once('conexión.php');
 
-  <?php
-  require_once('connect_db.php');
+// Comprobar si se ha definido el campo del formulario
+if (isset($_POST['id'])) {
+    // filtrar y validar id
+    if (!filter_var($_POST['id'], FILTER_VALIDATE_INT)) {
+        die('Error: el id proporcionado no es un entero');
+    } else {
 
-  if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    if (!filter_var($id, FILTER_VALIDATE_INT)) {
-      die('Error: the ID is not an integer.');
+        $id  = $_POST['id'];
+
+        // sentencia preparada
+        $sql = 'DELETE FROM biblioteca WHERE id=?';
+        $sth = $conn->prepare($sql);
+        $sth->execute(array($id));
     }
-    $sql = 'DELETE FROM students WHERE id=?';
-    $sth = $dbh->prepare($sql);
-    $sth->execute(array($id));
-  }
-  else {
-    die('Error: the ID is empty.');
-  }
-  ?>
-    <body>
-    </body>
-</html>
+}
+?>
