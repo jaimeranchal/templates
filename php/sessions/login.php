@@ -10,7 +10,7 @@ $pass    = $_POST['pass'];
 /* Comprobación de datos */
 // Sentencia preparada
 $sql = 'SELECT * FROM usuario WHERE usuario=:usuario and pass=:pass';
-$stp = $conn->prepare($sql);
+$stp = $dbh->prepare($sql);
 $stp->bindParam(':usuario', $usuario);
 $stp->bindParam(':pass', $pass);
 $stop->execute();
