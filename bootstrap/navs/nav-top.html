@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Plantilla</title>
+        <title>NavBar 1</title>
         <!-- Bootstrap stylesheet -->
         <link
             rel="stylesheet"
@@ -14,11 +14,11 @@
         />
     </head>
     <body>
-        <!-- Navegación (barra superior)-->
+        <!-- Navegación (barra superior / responsivo)-->
         <!-- añade navbar-dark|light para controlar contraste -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <!-- brand / logo -->
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">WebSiteName</a>
             <!-- menú hamburguesa -->
             <button class="navbar-toggler" type="button"
              data-toggle="collapse"
@@ -33,18 +33,19 @@
             <!-- contenido colapsable -->
             <div class="collapse navbar-collapse" id="ejemploNav">
                 <!-- Enlaces -->
+                <!-- Sección izquierda -->
                 <ul class="navbar-nav mr-auto">
                     <!-- items del menú -->
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio
+                        <a class="nav-link" href="#">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#">Page 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre mí</a>
+                        <a class="nav-link" href="#">Page 2</a>
                     </li>
                     <!-- desplegable -->
                     <li class="nav-item dropdown">
@@ -55,11 +56,11 @@
                            role="button" data-toggle="dropdown" 
                            aria-haspopup="true" 
                            aria-expanded="false"
-                           >Desplegable</a>
+                           >Dropdown</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <!-- items del menú -->
-                            <a class="dropdown-item" href="#" >Página 1</a>
-                            <a class="dropdown-item" href="#" >Página 2</a>
+                            <a class="dropdown-item" href="#" >Page 3</a>
+                            <a class="dropdown-item" href="#" >Page 4</a>
                         </div>
                     </li>
                 </ul>
